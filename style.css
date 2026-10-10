@@ -1,0 +1,1404 @@
+/* ===================================================== */
+/* 🟦 GLOBAL / BODY START — COPY */
+/* ===================================================== */
+
+body{
+font-family:"Comic Sans MS",Arial;
+background:#e9f6ff;
+text-align:center;
+margin:0;
+padding:0;
+overflow-x:hidden;
+}
+
+/* ===================================================== */
+/* 🟦 GLOBAL / BODY END */
+/* ===================================================== */
+
+
+
+/* ===================================================== */
+/* 🟩 HEADER START — COPY */
+/* ===================================================== */
+
+header{
+background:white;
+padding:8px;
+box-shadow:0 3px 8px rgba(0,0,0,0.2);
+}
+
+h1{
+font-size:2em;
+margin:5px 0;
+}
+
+.button-row{
+margin-top:5px;
+}
+
+.button-row button{
+background:#3ecf5b;
+color:white;
+border:none;
+border-radius:15px;
+padding:12px 22px;
+font-weight:bold;
+font-size:1.2em;
+margin:5px;
+cursor:pointer;
+box-shadow:0 5px #2fa04a;
+transition:0.2s;
+}
+
+.button-row button:hover{
+transform:scale(1.08);
+}
+
+/* ===================================================== */
+/* 🟩 HEADER END */
+/* ===================================================== */
+
+
+
+/* ===================================================== */
+/* 🟦 MAIN LAYOUT START — COPY */
+/* ===================================================== */
+
+#game-container{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+gap:20px;
+margin:10px;
+}
+
+/* ===================================================== */
+/* 🟦 MAIN LAYOUT END */
+/* ===================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================================== */
+/* ⭐⭐⭐⭐⭐ PHONICS ENGINE — COPY AND PASTE THIS PART ⭐⭐⭐⭐⭐ */
+/* ===================================================== */
+/* ===================================================== */
+/* ⭐ PHONICS ENGINE (SPINWHEEL VERSION) */
+/* ===================================================== */
+
+#left-panel{
+width:40%;
+text-align:center;
+}
+
+/* 🖼 IMAGE */
+#image{
+width:90%;
+max-width:480px;
+border-radius:15px;
+margin-top:5px;
+transition:transform 0.3s ease;
+}
+
+/* 🔤 LETTER CONTAINER */
+#letters{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+margin:20px 0;
+}
+
+/* 🔤 LETTER BUTTON */
+.letter-btn{
+
+aspect-ratio:1/1;
+flex:1 1 0;
+
+min-width:60px;
+max-width:130px;
+
+font-size:5rem;
+font-weight:bold;
+
+background:linear-gradient(145deg,#0a84ff,#0066cc);
+color:white;
+
+border-radius:25px;
+border:4px solid white;
+
+cursor:pointer;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+box-shadow:
+6px 6px 12px rgba(0,0,0,0.25),
+-4px -4px 10px rgba(255,255,255,0.6),
+inset -4px -4px 8px rgba(0,0,0,0.25),
+inset 4px 4px 8px rgba(255,255,255,0.7);
+
+transition:all 0.15s ease;
+
+animation:bounceVibrateGroup 0.8s infinite;
+}
+
+/* 🔘 PRESS */
+.letter-btn:active{
+transform:scale(0.92);
+box-shadow:
+inset 6px 6px 12px rgba(0,0,0,0.35),
+inset -4px -4px 10px rgba(255,255,255,0.6);
+}
+
+/* 🟠 SELECTED */
+.letter-btn.selected{
+background:linear-gradient(145deg,#ffb347,#ff7f24);
+animation:none;
+}
+
+/* 🟡 BLENDED */
+.letter-btn.blended{
+background:linear-gradient(145deg,#ffe066,#ffcc00);
+color:black;
+animation:blendBounce 0.6s 3;
+}
+
+/* ✨ IDLE BOUNCE */
+@keyframes bounceVibrateGroup{
+0%,100%{transform:scale(1);}
+50%{transform:scale(1.05);}
+}
+
+/* ✨ BLEND POP */
+@keyframes blendBounce{
+0%{transform:scale(1)}
+50%{transform:scale(1.18)}
+100%{transform:scale(1)}
+}
+
+/* 🟢 BLEND BUTTON */
+#blendBtn{
+
+width:500px;
+
+font-size:2em;
+font-weight:bold;
+
+padding:20px 0;
+
+margin:10px auto;
+
+border-radius:25px;
+border:4px solid white;
+
+background:linear-gradient(145deg,#3ecf5b,#2fa04a);
+color:white;
+
+cursor:pointer;
+
+box-shadow:
+6px 6px 12px rgba(0,0,0,0.3),
+-4px -4px 10px rgba(255,255,255,0.7),
+inset -3px -3px 6px rgba(0,0,0,0.25),
+inset 3px 3px 6px rgba(255,255,255,0.8);
+
+transition:all 0.2s ease;
+}
+
+/* 🔥 READY STATE */
+#blendBtn.ready{
+animation:blendPulse 1s infinite;
+}
+
+@keyframes blendPulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.1)}
+100%{transform:scale(1)}
+}
+
+/* ===================================================== */
+/* ⭐ END PHONICS ENGINE (SPINWHEEL VERSION) */
+/* ===================================================== */
+
+/* ===================================================== */
+/* ⭐⭐⭐⭐⭐ END PHONICS ENGINE — COPY AND PASTE THIS PART ⭐⭐⭐⭐⭐ */
+/* ===================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================================== */
+/* 🎮 GAME ENGINE START — CLEAN FINAL (ROAMING VERSION) */
+/* ===================================================== */
+
+/* ===================== */
+/* 🎮 RIGHT PANEL */
+/* ===================== */
+
+#right-panel{
+width:60%;
+text-align:center;
+}
+
+/* ===================== */
+/* 🎮 GAME AREA */
+/* ===================== */
+
+#game-area{
+width:100%;
+max-width:1000px;
+margin:0 auto;
+position:relative;
+}
+
+/* ===================== */
+/* 🧮 SCOREBOARD */
+/* ===================== */
+
+.scoreboard{
+display:flex;
+justify-content:center;
+gap:40px;
+align-items:center;
+margin:12px 0 12px;
+}
+
+.team{
+font-size:28px;
+background:white;
+padding:15px 15px;
+border-radius:16px;
+border:6px solid transparent;
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.team-emoji{
+font-size:58px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* ACTIVE TEAM */
+.dog.active{
+border-color:#ff3b3b;
+box-shadow:0 0 20px #ff3b3b;
+animation:teamPulse 1.2s infinite;
+}
+
+.tiger.active{
+border-color:#2f80ff;
+box-shadow:0 0 20px #2f80ff;
+animation:teamPulse 1.2s infinite;
+}
+
+@keyframes teamPulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.06);}
+100%{transform:scale(1);}
+}
+
+
+/* ===================================================== */
+/* 🌲 GRID (BLACK GLITTER VERSION) */
+/* ===================================================== */
+
+#forestGrid{
+display:grid;
+grid-template-columns: repeat(7, 1fr);
+gap:0;
+width:100%;
+max-width:1000px;
+margin:20px auto;
+}
+
+
+/* ===================================================== */
+/* 🌊 TILE — DEEP OCEAN BASE */
+/* ===================================================== */
+
+.tile{
+  position:relative;
+  aspect-ratio:1 / 1;
+  border-radius:12px;
+  overflow:hidden;
+
+  background:
+    radial-gradient(circle at 30% 30%, rgba(120,200,255,0.12), transparent 60%),
+    linear-gradient(145deg,#041a2b,#010d18);
+
+  border:2px solid rgba(120,200,255,0.35);
+
+  box-shadow:
+    inset 0 0 20px rgba(0,150,255,0.25),
+    0 6px 16px rgba(0,0,0,0.8);
+
+  animation:oceanPulse 3s ease-in-out infinite;
+}
+
+
+/* ===================================================== */
+/* ✨ BLUE GLITTER SPARKLES */
+/* ===================================================== */
+
+.tile::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+
+  background:
+    radial-gradient(circle, #9be7ff 1px, transparent 1.5px),
+    radial-gradient(circle, #4fc3f7 1px, transparent 1.5px),
+    radial-gradient(circle, #e0f7ff 1px, transparent 1.5px);
+
+  background-size: 40px 40px, 60px 60px, 80px 80px;
+
+  animation:blueTwinkle 3s linear infinite;
+
+  opacity:0.7;
+  pointer-events:none;
+}
+
+
+/* ===================================================== */
+/* 💎 WATER SHIMMER SWEEP */
+/* ===================================================== */
+
+.tile::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent 35%,
+      rgba(120,220,255,0.35),
+      transparent 65%
+    );
+
+  transform:translateX(-100%);
+  animation:waterSweep 4s linear infinite;
+
+  pointer-events:none;
+}
+
+
+/* ===================================================== */
+/* 🌊 PULSE GLOW (BREATHING OCEAN) */
+/* ===================================================== */
+
+@keyframes oceanPulse{
+  0%{
+    box-shadow:
+      inset 0 0 10px rgba(0,120,255,0.2),
+      0 4px 10px rgba(0,0,0,0.8);
+  }
+  50%{
+    box-shadow:
+      inset 0 0 30px rgba(0,200,255,0.5),
+      0 6px 18px rgba(0,0,0,0.9);
+  }
+  100%{
+    box-shadow:
+      inset 0 0 10px rgba(0,120,255,0.2),
+      0 4px 10px rgba(0,0,0,0.8);
+  }
+}
+
+
+/* ===================================================== */
+/* ✨ BLUE GLITTER ANIMATION */
+/* ===================================================== */
+
+@keyframes blueTwinkle{
+  0%{
+    background-position:0 0, 10px 20px, 20px 40px;
+    opacity:0.5;
+  }
+  50%{
+    background-position:20px 30px, 40px 10px, 60px 20px;
+    opacity:1;
+  }
+  100%{
+    background-position:0 0, 10px 20px, 20px 40px;
+    opacity:0.5;
+  }
+}
+
+
+/* ===================================================== */
+/* 💎 WATER SWEEP */
+/* ===================================================== */
+
+@keyframes waterSweep{
+  0%{
+    transform:translateX(-120%);
+    opacity:0;
+  }
+  20%{
+    opacity:1;
+  }
+  50%{
+    opacity:0.6;
+  }
+  100%{
+    transform:translateX(120%);
+    opacity:0;
+  }
+}
+
+/* ===================================================== */
+/* 🐾 FLOATING ANIMAL SYSTEM */
+/* ===================================================== */
+
+#animalLayer{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:5;
+  overflow:hidden;
+}
+
+
+/* ===================================================== */
+/* 🐾 BASE ANIMAL */
+/* ===================================================== */
+
+.animal{
+  position:absolute;
+  font-size:90px;
+  pointer-events:auto;
+  user-select:none;
+}
+
+/* ===================================================== */
+/* 🟢 NORMAL + TARGET (IDLE LIFE) */
+/* ===================================================== */
+
+.animal.normal{
+  animation:animalBounce 2.2s infinite ease-in-out;
+}
+
+.animal.target{
+  animation:animalBounce 0.8s infinite ease-in-out;
+}
+
+
+/* ===================================================== */
+/* 🛑 STOP BOUNCE DURING HIGHLIGHT */
+/* ===================================================== */
+
+.animal.jump-highlight,
+.animal.final-highlight{
+  animation:none !important;
+}
+
+
+/* ===================================================== */
+/* ✨ BOUNCE */
+/* ===================================================== */
+
+@keyframes animalBounce{
+  0%{ transform:translate(-50%, -50%) translateY(0); }
+  50%{ transform:translate(-50%, -50%) translateY(-8px); }
+  100%{ transform:translate(-50%, -50%) translateY(0); }
+}
+
+/* ===================================================== */
+/* 🪟 RESULT POPUP */
+/* ===================================================== */
+
+.result-popup{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:999;
+pointer-events:none;
+}
+
+.result-box{
+background:white;
+width:85%;
+max-width:500px;
+padding:20px 40px;   /* top/bottom , left/right */
+border-radius:25px;
+text-align:center;
+
+/* ✨ base shadow */
+box-shadow:0 25px 45px rgba(0,0,0,0.35);
+
+animation:popIn 0.3s ease;
+transition:0.3s;
+}
+
+
+/* ===================================================== */
+/* 🐶 RESULT POPUP DOG WIN (RED) */
+/* ===================================================== */
+
+.result-box.dog-win{
+border:5px solid #ff3b3b;
+
+box-shadow:
+0 0 25px rgba(255,60,60,0.8),
+0 0 60px rgba(255,60,60,0.6),
+0 25px 45px rgba(0,0,0,0.35);
+
+animation:popIn 0.3s ease, dogPulse 1s infinite alternate;
+}
+
+
+/* ===================================================== */
+/* 🐯 RESULT POPUP TIGER WIN (BLUE) */
+/* ===================================================== */
+
+.result-box.tiger-win{
+border:5px solid #2f80ff;
+
+box-shadow:
+0 0 25px rgba(47,128,255,0.8),
+0 0 60px rgba(47,128,255,0.6),
+0 25px 45px rgba(0,0,0,0.35);
+
+animation:popIn 0.3s ease, tigerPulse 1s infinite alternate;
+}
+
+
+/* ===================================================== */
+/* ❤️ RESULT POPUP DOG PULSE (RED) */
+/* ===================================================== */
+
+@keyframes dogPulse{
+0%{
+box-shadow:
+0 0 20px rgba(255,60,60,0.6),
+0 0 40px rgba(255,60,60,0.4),
+0 25px 45px rgba(0,0,0,0.35);
+}
+100%{
+box-shadow:
+0 0 50px rgba(255,60,60,1),
+0 0 90px rgba(255,60,60,0.8),
+0 25px 45px rgba(0,0,0,0.35);
+}
+}
+
+
+/* ===================================================== */
+/* 💙 RESULT POPUP TIGER PULSE (BLUE) */
+/* ===================================================== */
+
+@keyframes tigerPulse{
+0%{
+box-shadow:
+0 0 20px rgba(47,128,255,0.6),
+0 0 40px rgba(47,128,255,0.4),
+0 25px 45px rgba(0,0,0,0.35);
+}
+100%{
+box-shadow:
+0 0 50px rgba(47,128,255,1),
+0 0 90px rgba(47,128,255,0.8),
+0 25px 45px rgba(0,0,0,0.35);
+}
+}
+
+/* ===================================================== */
+/* ✨ RESULT POPUP EMOJI */
+/* ===================================================== */
+
+.result-emoji{
+font-size:240px;
+}
+
+.result-emoji.winner{
+font-size:260px;
+animation:popBig 0.4s ease;
+}
+
+
+/* ===================================================== */
+/* ✨ RESULT POPUP TEXT */
+/* ===================================================== */
+
+.result-text{
+font-size:48px;
+margin-top:20px;
+}
+
+
+/* ===================================================== */
+/* 🎬 RESULT POPUP POP IN */
+/* ===================================================== */
+
+@keyframes popIn{
+0%{transform:scale(0.6); opacity:0;}
+100%{transform:scale(1); opacity:1;}
+}
+
+
+/* ===================================================== */
+/* 🎬 RESULT POPUP BIG EMOJI POP */
+/* ===================================================== */
+
+@keyframes popBig{
+0%{transform:scale(0.6);}
+60%{transform:scale(1.3);}
+100%{transform:scale(1);}
+}
+
+
+
+
+/* ===================================================== */
+/* 🎉 CONFETTI */
+/* ===================================================== */
+
+.confetti{
+position:fixed;
+top:-20px;
+z-index:9999;
+animation:confettiFall linear forwards;
+}
+
+@keyframes confettiFall{
+0%{transform:translate(0,0) rotate(0);}
+100%{transform:translate(var(--drift,0),100vh) rotate(720deg);}
+}
+
+.confetti.burst{
+position:fixed;
+animation:burstMove ease-out forwards;
+}
+
+@keyframes burstMove{
+0%{transform:translate(0,0);}
+100%{transform:translate(var(--x),var(--y)) rotate(720deg);}
+}
+
+
+
+
+/* ===================================================== */
+/* 📝 INSTRUCTIONS — 2 LINES, DEFAULT GAME FONT */
+/* ===================================================== */
+
+#instructionText{
+margin:4px 0 2px;
+font-size:calc(1.4em - 6.7px);   /* 5pt smaller than before */
+line-height:1.4;
+}
+
+.instr-line{
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+
+
+/* ===================================================== */
+/* 🧮 SCORE BOX (SHORT RECTANGLE NUMBER) */
+/* ===================================================== */
+
+.team{
+position:relative;
+}
+
+.score-box{
+min-width:90px;
+height:72px;
+padding:0 16px;
+border-radius:14px;
+border:4px solid;
+font-size:52px;
+font-weight:bold;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:inset 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.dog .score-box{
+color:#e02424;
+border-color:#ff3b3b;
+background:#fff0f0;
+}
+
+.tiger .score-box{
+color:#1f63d6;
+border-color:#2f80ff;
+background:#eef4ff;
+}
+
+.score-box.bump{
+animation:scoreBump 0.6s ease;
+}
+
+@keyframes scoreBump{
+0%{transform:scale(1);}
+30%{transform:scale(1.45);}
+60%{transform:scale(0.9);}
+100%{transform:scale(1);}
+}
+
+/* ⬆️ FLOATING +N */
+.score-float{
+position:absolute;
+top:-10px;
+left:50%;
+font-size:44px;
+font-weight:bold;
+color:#ff8c00;
+text-shadow:0 2px 0 white, 0 0 12px rgba(255,200,0,0.9);
+pointer-events:none;
+animation:floatUp 1.4s ease-out forwards;
+}
+
+@keyframes floatUp{
+0%{transform:translate(-50%,20px) scale(0.6); opacity:0;}
+20%{transform:translate(-50%,0) scale(1.3); opacity:1;}
+100%{transform:translate(-50%,-70px) scale(1); opacity:0;}
+}
+
+
+/* ===================================================== */
+/* 🛑 END GAME BUTTON — GREEN, OUTSIDE TIGER BOX */
+/* ===================================================== */
+
+#endGameBtn{
+width:80px;
+height:80px;
+margin-left:-22px;   /* sits snug next to the tiger box */
+border-radius:18px;
+border:4px solid white;
+background:linear-gradient(145deg,#3ecf5b,#2fa04a);
+color:white;
+font-family:inherit;
+font-size:16px;
+font-weight:bold;
+line-height:1.15;
+cursor:pointer;
+box-shadow:
+6px 6px 12px rgba(0,0,0,0.3),
+inset -3px -3px 6px rgba(0,0,0,0.25),
+inset 3px 3px 6px rgba(255,255,255,0.8);
+transition:transform 0.15s;
+}
+
+#endGameBtn:hover{
+transform:scale(1.08);
+}
+
+#endGameBtn:active{
+transform:scale(0.92);
+}
+
+
+/* ===================================================== */
+/* 🎰 DIGIT BOX — SLOT MACHINE (REPLACES CATCH BUTTON) */
+/* ===================================================== */
+
+.roll-box{
+--glow:255,200,60;
+position:relative;
+z-index:2;
+width:158px;
+height:150px;
+background:white;
+border-radius:22px;
+border:6px solid #ddd;
+overflow:hidden;
+box-shadow:0 8px 18px rgba(0,0,0,0.25);
+}
+
+.roll-box.dog{ --glow:255,60,60; border-color:#ff3b3b; }
+.roll-box.tiger{ --glow:47,128,255; border-color:#2f80ff; }
+
+.reel-window{
+width:100%;
+height:100%;
+overflow:hidden;
+}
+
+/* 🔢 each digit fills the whole box */
+.reel-digit{
+height:150px;
+line-height:150px;
+font-size:130px;
+font-weight:bold;
+color:white;
+-webkit-text-stroke:5px rgba(0,0,0,0.3);
+paint-order:stroke fill;
+text-shadow:0 6px 0 rgba(0,0,0,0.15);
+}
+
+/* 🌈 kids-game palette colour per number */
+.reel-digit.d1{ background:#FF595E; }   /* red */
+.reel-digit.d2{ background:#FF924C; }   /* orange */
+.reel-digit.d3{ background:#8AC926; }   /* green */
+.reel-digit.d4{ background:#1982C4; }   /* blue */
+.reel-digit.d5{ background:#6A4C93; }   /* purple */
+.reel-digit.d6{ background:#FF5CA8; }   /* pink */
+.reel-digit.d7{                          /* GOLD   */
+background:linear-gradient(180deg,#fff1a8,#ffcc00 55%,#f0a800);
+-webkit-text-stroke:5px rgba(140,90,0,0.55);
+}
+
+.reel-digit.q{
+background:#f1f3f7;
+color:#a2abbd;
+-webkit-text-stroke:0;
+text-shadow:none;
+}
+
+/* 💎 shine sweep */
+.roll-box::after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,0.8) 50%,transparent 70%);
+transform:translateX(-130%);
+pointer-events:none;
+}
+
+/* 🦘 ROLLING — rhythmic bounce + shine + pulsing glow */
+.roll-box.rolling{
+animation:
+rollBounce 0.42s ease-in-out infinite,
+rollGlow 0.42s ease-in-out infinite alternate;
+}
+
+.roll-box.rolling::after{
+animation:boxShine 0.55s linear infinite;
+}
+
+.roll-box.fast .reel-strip{
+filter:blur(2.5px);
+}
+
+/* 😮 near-miss tension — quicker bounce */
+.roll-box.tease{
+animation:
+rollBounce 0.3s ease-in-out infinite,
+rollGlow 0.3s ease-in-out infinite alternate;
+}
+
+/* 🦘 kiddy bounce with a beat (boing… boing…) */
+@keyframes rollBounce{
+0%{   transform:translateY(0) scale(1.06,0.94); }
+30%{  transform:translateY(-14px) scale(0.97,1.04); }
+55%{  transform:translateY(-16px) scale(1,1); }
+85%{  transform:translateY(0) scale(1.04,0.96); }
+100%{ transform:translateY(0) scale(1.06,0.94); }
+}
+
+@keyframes rollShake{
+0%{transform:translate(0,0) rotate(0);}
+25%{transform:translate(-5px,2px) rotate(-2deg);}
+50%{transform:translate(4px,-3px) rotate(2deg);}
+75%{transform:translate(-3px,3px) rotate(-1deg);}
+100%{transform:translate(0,0) rotate(0);}
+}
+
+@keyframes rollShakeBig{
+0%{transform:translate(0,0) rotate(0) scale(1.06);}
+25%{transform:translate(-8px,3px) rotate(-4deg) scale(1.06);}
+50%{transform:translate(7px,-4px) rotate(4deg) scale(1.06);}
+75%{transform:translate(-5px,4px) rotate(-2deg) scale(1.06);}
+100%{transform:translate(0,0) rotate(0) scale(1.06);}
+}
+
+@keyframes rollGlow{
+0%{ box-shadow:0 0 18px rgba(var(--glow),0.7), 0 8px 18px rgba(0,0,0,0.25); }
+100%{ box-shadow:0 0 50px rgba(var(--glow),1), 0 0 90px rgba(255,230,120,0.85), 0 8px 18px rgba(0,0,0,0.25); }
+}
+
+@keyframes boxShine{
+0%{ transform:translateX(-130%); }
+100%{ transform:translateX(130%); }
+}
+
+/* 🎯 LANDED — pop */
+.roll-box.landed{
+animation:rollLand 0.6s cubic-bezier(.3,1.6,.5,1);
+box-shadow:0 0 40px rgba(var(--glow),1), 0 8px 18px rgba(0,0,0,0.25);
+}
+
+@keyframes rollLand{
+0%{transform:scale(1);}
+40%{transform:scale(1.3) rotate(-4deg);}
+70%{transform:scale(0.95) rotate(2deg);}
+100%{transform:scale(1);}
+}
+
+/* 🌟 RARE 7 — gold box that keeps dancing */
+.roll-box.rare{
+border-color:#ffd700;
+animation:rareBox 0.45s ease-in-out infinite alternate;
+}
+
+.roll-box.rare::after{
+animation:boxShine 0.8s linear infinite;
+}
+
+@keyframes rareBox{
+0%{ transform:scale(1.05) rotate(-3deg);
+    box-shadow:0 0 30px gold, 0 0 60px #ffd700; }
+100%{ transform:scale(1.18) rotate(3deg);
+    box-shadow:0 0 60px #fff6b0, 0 0 120px gold, 0 0 160px #ffae00; }
+}
+
+/* ✨ spinning golden rays behind the box */
+.rays{
+position:fixed;
+width:520px;
+height:520px;
+z-index:1;
+pointer-events:none;
+border-radius:50%;
+background:repeating-conic-gradient(rgba(255,215,0,0.8) 0deg 10deg, transparent 10deg 22deg);
+-webkit-mask:radial-gradient(circle, #000 25%, transparent 70%);
+mask:radial-gradient(circle, #000 25%, transparent 70%);
+animation:raysSpin 3s linear infinite, raysFade 4.8s ease forwards;
+}
+
+@keyframes raysSpin{
+from{ transform:translate(-50%,-50%) rotate(0deg); }
+to{ transform:translate(-50%,-50%) rotate(360deg); }
+}
+
+@keyframes raysFade{
+0%{opacity:0;}
+10%{opacity:1;}
+80%{opacity:1;}
+100%{opacity:0;}
+}
+
+
+/* ===================================================== */
+/* 🎊 DOT / EMOJI BURST FROM THE BOX */
+/* ===================================================== */
+
+.burst-dot{
+position:fixed;
+z-index:9998;
+pointer-events:none;
+border-radius:50%;
+transform:translate(-50%,-50%);
+animation:dotBurst 1s ease-out forwards;
+}
+
+.burst-dot.emoji{
+border-radius:0;
+line-height:1;
+}
+
+@keyframes dotBurst{
+0%{ transform:translate(-50%,-50%) scale(0.3) rotate(0); opacity:1; }
+70%{ opacity:1; }
+100%{ transform:translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(1) rotate(var(--r)); opacity:0; }
+}
+
+
+/* ===================================================== */
+/* 🎆 FIREWORKS FROM THE DIGIT BOX */
+/* ===================================================== */
+
+.fw-spark{
+position:fixed;
+z-index:9998;
+pointer-events:none;
+border-radius:50%;
+transform:translate(-50%,-50%);
+/* 🫧 sparkly blue bubble: shiny highlight + see-through middle + blue rim */
+background:
+radial-gradient(circle at 30% 30%, rgba(255,255,255,0.95) 0 18%, transparent 24%),
+radial-gradient(circle, rgba(var(--b),0.15) 45%, rgba(var(--b),0.9) 68%, rgba(255,255,255,0.9) 74%, transparent 76%);
+box-shadow:0 0 10px rgba(var(--b),0.9), 0 0 20px rgba(var(--b),0.5);
+animation:fwSpark 1.3s cubic-bezier(.1,.8,.3,1) forwards, bubbleTwinkle 0.25s ease-in-out infinite alternate;
+}
+
+@keyframes fwSpark{
+0%{   transform:translate(-50%,-50%) scale(0.4); opacity:1; }
+55%{  transform:translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(1); opacity:1; }
+100%{ transform:translate(calc(-50% + var(--x)), calc(-50% + var(--y) - 45px)) scale(1.15); opacity:0; }
+}
+
+@keyframes bubbleTwinkle{
+from{ filter:brightness(1); }
+to{   filter:brightness(1.6); }
+}
+
+.fw-flash{
+position:fixed;
+z-index:9998;
+pointer-events:none;
+width:120px;
+height:120px;
+border-radius:50%;
+background:radial-gradient(circle, #fff 0%, rgba(140,220,255,0.9) 30%, transparent 70%);
+transform:translate(-50%,-50%) scale(0.2);
+animation:fwFlash 0.5s ease-out forwards;
+}
+
+@keyframes fwFlash{
+0%{   transform:translate(-50%,-50%) scale(0.2); opacity:1; }
+100%{ transform:translate(-50%,-50%) scale(1.6); opacity:0; }
+}
+
+
+/* ===================================================== */
+/* 🫧 AMBIENT SWIM BUBBLES */
+/* ===================================================== */
+
+.swim-bubble{
+position:absolute;
+z-index:4;
+pointer-events:none;
+border-radius:50%;
+background:radial-gradient(circle at 32% 30%,
+  rgba(255,255,255,1) 0 18%,
+  rgba(140,220,255,0.55) 50%,
+  rgba(60,170,255,0.3) 100%);
+border:2px solid rgba(220,245,255,0.95);
+box-shadow:0 0 8px rgba(140,220,255,0.9), 0 0 16px rgba(80,180,255,0.5);
+transform:translate(-50%,-50%);
+animation:swimBubble 2s ease-out forwards;
+}
+
+@keyframes swimBubble{
+0%{   transform:translate(-50%,-50%) scale(0.3); opacity:0; }
+15%{  opacity:1; }
+50%{  transform:translate(calc(-50% + var(--wob)), calc(-50% + var(--rise) * 0.5)) scale(1); }
+100%{ transform:translate(calc(-50% - var(--wob)), calc(-50% + var(--rise))) scale(1.15); opacity:0; }
+}
+
+
+/* ===================================================== */
+/* 🔒 FIELD LOCK STATES */
+/* ===================================================== */
+
+#game-area{
+transition:opacity 0.4s;
+}
+
+#game-area.locked{
+opacity:0.3;
+}
+
+#game-area:not(.locked):not(.busy) .animal{
+cursor:pointer;
+}
+
+#game-area.locked .animal,
+#game-area.busy .animal{
+pointer-events:none;
+}
+
+
+/* ===================================================== */
+/* 👆 PICKED CREATURE (ON ITS SPOT) */
+/* ===================================================== */
+
+.animal.picked{
+z-index:9;
+animation:pickedPulse 0.45s ease-in-out;
+}
+
+.animal.picked-dog,
+.big-creature.picked-dog{
+filter:
+drop-shadow(0 0 4px #ff3b3b)
+drop-shadow(0 0 4px #ff3b3b)
+drop-shadow(0 0 16px #ff3b3b)
+drop-shadow(0 0 50px gold);
+}
+
+.animal.picked-tiger,
+.big-creature.picked-tiger{
+filter:
+drop-shadow(0 0 4px #2f80ff)
+drop-shadow(0 0 4px #2f80ff)
+drop-shadow(0 0 16px #2f80ff)
+drop-shadow(0 0 50px gold);
+}
+
+@keyframes pickedPulse{
+0%{ transform:translate(-50%,-50%) scale(1); }
+100%{ transform:translate(-50%,-50%) scale(1.8); }
+}
+
+
+/* ===================================================== */
+/* 🔦 CATCH STAGE — HUGE CREATURE + NET IN THE CENTRE */
+/* ===================================================== */
+
+.catch-stage{
+position:absolute;
+inset:0;
+z-index:20;
+pointer-events:none;
+border-radius:12px;
+background:rgba(0,15,40,0);
+transition:background 0.5s;
+}
+
+.catch-stage.show{
+background:rgba(0,15,40,0.5);
+}
+
+/* zero-size anchor at the creature's spot; content centres on it */
+.big-wrap{
+position:absolute;
+width:0;
+height:0;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.big-creature{
+font-size:clamp(150px, 19vw, 290px);
+line-height:1;
+animation:bigPulse 1s ease-in-out infinite;
+}
+
+@keyframes bigPulse{
+0%,100%{ transform:scale(1); }
+50%{ transform:scale(1.08); }
+}
+
+/* 🌟 gold creature for the rare 7 */
+.big-creature.gold{
+filter:
+drop-shadow(0 0 8px #fff)
+drop-shadow(0 0 30px gold)
+drop-shadow(0 0 80px #ffd700)
+drop-shadow(0 0 140px #ffae00) !important;
+animation:goldDance 0.45s ease-in-out infinite alternate;
+}
+
+@keyframes goldDance{
+0%{ transform:scale(1.05) rotate(-7deg); }
+100%{ transform:scale(1.2) rotate(7deg); }
+}
+
+/* 🕸️ big net */
+.big-net{
+position:absolute;
+left:50%;
+top:50%;
+width:0;
+height:0;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:clamp(230px, 29vw, 440px);
+line-height:1;
+opacity:0.7;
+filter:drop-shadow(0 0 10px white) drop-shadow(0 0 24px yellow);
+animation:
+bigNetDrop 0.6s cubic-bezier(.2,.9,.3,1.2) forwards,
+bigNetHover 0.45s ease-in-out 0.6s infinite alternate;
+}
+
+@keyframes bigNetDrop{
+0%{ transform:translateY(-120%) scale(0.6); opacity:0; }
+100%{ transform:translateY(-6%) scale(1); opacity:0.7; }
+}
+
+@keyframes bigNetHover{
+0%{ transform:translateY(-8%) scale(1); }
+100%{ transform:translateY(3%) scale(1); }
+}
+
+.big-net.snap{
+animation:bigNetSnap 1.2s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+@keyframes bigNetSnap{
+0%{ transform:scale(1) rotate(0deg); }
+50%{ transform:scale(1) rotate(1080deg); }
+70%{ transform:scale(0.72) rotate(1080deg); }
+85%{ transform:scale(0.86) rotate(1080deg); }
+100%{ transform:scale(0.8) rotate(1080deg); }
+}
+
+/* 💨 stage disappears */
+.catch-stage.gone{
+animation:stageGone 0.5s ease-in forwards;
+}
+
+@keyframes stageGone{
+to{ opacity:0; transform:scale(0.3); }
+}
+
+/* 🌟 RARE banner on the stage */
+.rare-banner{
+position:absolute;
+top:5%;
+left:50%;
+z-index:3;
+font-size:clamp(44px, 5.5vw, 80px);
+font-weight:bold;
+white-space:nowrap;
+color:#ffd700;
+-webkit-text-stroke:3px #8a5a00;
+paint-order:stroke fill;
+text-shadow:0 0 20px #fff, 0 0 40px gold;
+animation:
+bannerPop 0.6s cubic-bezier(.3,1.6,.5,1) forwards,
+bannerWiggle 0.4s ease-in-out 0.6s infinite alternate;
+}
+
+@keyframes bannerPop{
+0%{ transform:translateX(-50%) scale(0); }
+100%{ transform:translateX(-50%) scale(1); }
+}
+
+@keyframes bannerWiggle{
+0%{ transform:translateX(-50%) scale(1) rotate(-4deg); }
+100%{ transform:translateX(-50%) scale(1.1) rotate(4deg); }
+}
+
+
+/* ===================================================== */
+/* 🤝 TIE POPUP + SCORE LINE */
+/* ===================================================== */
+
+.result-box.tie-win{
+border:5px solid #9b59ff;
+box-shadow:
+-25px 0 50px rgba(255,60,60,0.8),
+25px 0 50px rgba(47,128,255,0.8),
+0 25px 45px rgba(0,0,0,0.35);
+}
+
+.result-emoji.tie{
+font-size:150px;
+}
+
+.result-score{
+font-size:44px;
+font-weight:bold;
+margin-top:10px;
+}
+
+.result-score .dog{ color:#e02424; }
+.result-score .tiger{ color:#1f63d6; }
+
+
+/* ===================================================== */
+/* 🎮 GAME ENGINE END */
+/* ===================================================== */
+
+/* ===================================================== */
+/* 📱 RESPONSIVE */
+/* ===================================================== */
+
+@media (max-width:1000px){
+
+#game-container{
+flex-direction:column;
+align-items:center;
+}
+
+#left-panel,
+#right-panel{
+width:90%;
+}
+
+.letter-btn{
+width:100px;
+font-size:3rem;
+}
+
+}
+
+
+/* ===================================================== */
+/* 🫧 BIG BUBBLE BURST (after the net catch) */
+/* ===================================================== */
+
+.big-bubble{
+position:fixed;
+z-index:1100;
+border-radius:50%;
+pointer-events:none;
+transform:translate(-50%,-50%) scale(0.2);
+background:
+radial-gradient(circle at 30% 28%, rgba(255,255,255,0.95) 0 12%, rgba(255,255,255,0) 22%),
+radial-gradient(circle at 50% 50%, rgba(160,225,255,0.15) 55%, rgba(120,200,255,0.55) 72%, rgba(255,255,255,0.9) 80%, rgba(120,200,255,0) 84%);
+box-shadow:0 0 18px rgba(120,210,255,0.8);
+animation-name:bigBubbleFly;
+animation-timing-function:cubic-bezier(.15,.8,.3,1);
+animation-fill-mode:both;
+}
+
+@keyframes bigBubbleFly{
+0%{ transform:translate(-50%,-50%) scale(0.2); opacity:0; }
+15%{ opacity:1; }
+75%{ transform:translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(1); opacity:1; }
+88%{ transform:translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(1.35); opacity:0.6; }
+100%{ transform:translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(1.6); opacity:0; }
+}

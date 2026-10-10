@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- ===================================================== -->
+<!-- 🧠 HEAD START — COPY -->
+<!-- ===================================================== -->
+
+<meta charset="UTF-8">
+<title>3/4 Sounds Blending Game: Sea Blast</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- ===================================================== -->
+<!-- 🧠 HEAD END -->
+<!-- ===================================================== -->
+
+</head>
+
+<body>
+
+
+<!-- ===================================================== -->
+<!-- 🟩 HEADER START — COPY -->
+<!-- ===================================================== -->
+
+<header>
+
+  <h1>3/4 Sounds Blending Game: Sea Blast</h1>
+
+  <div class="button-row">
+
+    <button id="shuffleBtn">Shuffle</button>
+    <button id="prevWordBtn">← Previous</button>
+    <button id="nextWordBtn">Next →</button>
+    <button id="mainMenuBtn">Back to Main Menu</button>
+
+  </div>
+
+</header>
+
+<!-- ===================================================== -->
+<!-- 🟩 HEADER END -->
+<!-- ===================================================== -->
+
+
+
+<!-- ===================================================== -->
+<!-- 🟦 MAIN LAYOUT START — COPY -->
+<!-- ===================================================== -->
+
+<div id="game-container">
+
+
+<!-- ===================================================== -->
+<!-- ⭐ PHONICS ENGINE — SPINWHEEL VERSION -->
+<!-- ===================================================== -->
+
+<div id="left-panel">
+
+  <!-- 🖼 IMAGE -->
+  <img id="image" src="" alt="word image">
+
+  <!-- 🔤 LETTER BUTTONS -->
+  <div id="letters"></div>
+
+  <!-- 🔊 BLEND BUTTON -->
+  <button id="blendBtn" disabled>
+    Blend
+  </button>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- ⭐ END PHONICS ENGINE -->
+<!-- ===================================================== -->
+
+
+<!-- ===================================================== -->
+<!-- 🎮 GAME ENGINE START — PICK A CREATURE + SECRET NUMBER -->
+<!-- ===================================================== -->
+
+<div id="right-panel">
+
+  <!-- 📝 INSTRUCTION -->
+  <div id="instructionText"></div>
+
+  <!-- 🧮 SCOREBOARD -->
+  <div class="scoreboard">
+
+    <!-- 🐶 DOG TEAM (RED) -->
+    <div id="dogTeam" class="team dog active">
+      <span class="team-emoji">🐶</span>
+      <div id="dogScore" class="score-box">0</div>
+    </div>
+
+    <!-- 🎰 ROLL BOX (replaces CATCH button) -->
+    <div id="rollBox" class="roll-box idle">
+      <div class="reel-window">
+        <div id="reelStrip" class="reel-strip">
+          <div class="reel-digit q">?</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🐯 TIGER TEAM (BLUE) -->
+    <div id="tigerTeam" class="team tiger">
+      <span class="team-emoji">🐯</span>
+      <div id="tigerScore" class="score-box">0</div>
+    </div>
+
+    <!-- 🛑 MODERATOR END GAME BUTTON -->
+    <button id="endGameBtn" title="End the game now">END<br>GAME</button>
+
+  </div>
+
+  <!-- 🌊 GAME AREA -->
+  <div id="game-area" class="locked">
+
+    <!-- 🟩 TILE GRID (BACKGROUND) -->
+    <div id="forestGrid"></div>
+
+    <!-- 🐾 FLOATING ANIMAL LAYER -->
+    <div id="animalLayer"></div>
+  </div>
+
+</div>
+
+
+<!-- ===================================================== -->
+<!-- 🎮 GAME ENGINE END -->
+<!-- ===================================================== -->
+
+
+</div>
+
+<!-- ===================================================== -->
+<!-- 🟦 MAIN LAYOUT END -->
+<!-- ===================================================== -->
+
+<!-- ===================================================== -->
+<!-- 📜 SCRIPT START — COPY -->
+<!-- ===================================================== -->
+
+<script src="game.js"></script>
+
+<!-- ===================================================== -->
+<!-- 📜 SCRIPT END -->
+<!-- ===================================================== -->
+
+
+</body>
+</html>
